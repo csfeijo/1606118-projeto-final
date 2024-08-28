@@ -6,14 +6,16 @@
 - [X] Setup do Tailwind
 
 ## Aula 02 - 27.08.2024
--
+- [X] Entendendo o Tailwind CSS
+- [X] Setup do PrimeReact
+- [X] Setup de dependências de rotas
 
 
 ## Links
-- https://flowbite.com/
-- https://www.tailwindawesome.com/
-- https://tailblocks.cc/
-- https://primereact.org/
+- [FlowByte - Blocos e componentes do Tailwind](https://flowbite.com/)
+- [Tailwind Awesome - Blocos Prontos de Tailwind](https://www.tailwindawesome.com/)
+- [Tail Blocks - Blocos Prontos de Tailwind](https://tailblocks.cc/)
+- [PrimeReact - Lib de Componentes que vamos usar](https://primereact.org/)
 
 ## Anotações:
 - CRA (Create React App): foi um dos primeiros bundlers de aplicações em React. Ele usa como configuração o WEBPACK.
