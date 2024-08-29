@@ -21,3 +21,13 @@
 - CRA (Create React App): foi um dos primeiros bundlers de aplicações em React. Ele usa como configuração o WEBPACK.
 - CRA está para ser descontinuado.
 - Vite: utiliza o proprio vite.config para configuração, é menos complexo, mais rapido e compativel com outros frameworks (React, Vue, Next, etc). Boa parte dos plugins para vite são auto configuraveis, ou de fácil configuração (tailwind)
+
+
+
+
+### Repositórios:
+
+Fabiana | https://github.com/FabianaSoft/projetoFinal
+Fogaça | https://github.com/FernandoFogaca/final_project1/tree/main
+João Carlos Lacerda | https://github.com/joaocarloslacerda/projeto-final-targettrust.git
+Wagner | https://github.com/wagnerworst/ProjetoFinalFS
