@@ -19,6 +19,13 @@
 - [x] Criação de Pages
 - [x] Criação da UI de Listagem com DataTable e mock
 
+## Aula 04 - 05.09.2024
+
+- [x] Correção do exercício de UI de Formulário do Departamento (inserção)
+- [x] Validação de campos do formulário com useState
+- [x] Camada de API com Axios
+- [x] Listagem de Departamentos via API
+
 ## Links
 
 - [FlowByte - Blocos e componentes do Tailwind](https://flowbite.com/)

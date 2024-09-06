@@ -1,21 +1,20 @@
+import { useState, useEffect } from 'react'
 import { DataTable } from 'primereact/datatable'
 import { Column } from 'primereact/column'
 import { Button } from 'primereact/button'
+import listaDepartamentos from '../../../Services/Departamentos/listaDepartamentos';
 
 const Departamentos = () => {
 
-  const departamentos = [
-    {
-      id_departamento: 1,
-      nome: 'Recursos Humanos',
-      sigla: 'RH'
-    },
-    {
-      id_departamento: 2,
-      nome: 'Tecnologia da Informação',
-      sigla: 'TI'
-    },
-  ]
+  const [departamentos, setDepartamentos] = useState()
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    if(!departamentos) {
+      listaDepartamentos({ setDepartamentos, setLoading })
+    }
+  }, [departamentos])
+
 
   const bodyAcao = () => {
     return (
@@ -33,7 +32,7 @@ const Departamentos = () => {
       </div>
 
       <div className="col-span-12">
-        <DataTable value={departamentos}>
+        <DataTable value={departamentos} loading={loading}>
           <Column field="sigla" header="Sigla"/>
           <Column field="nome" header="Nome"/>
           <Column header="Ação" body={bodyAcao} />
