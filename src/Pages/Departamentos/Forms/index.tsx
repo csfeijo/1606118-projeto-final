@@ -11,6 +11,24 @@ const FormDepartamento = () => {
   const [temErroNome, setTemErroNome] = useState(false)
   const [temErroSigla, setTemErroSigla] = useState(false)
 
+  const validaFormulario = () => {
+    setTemErroNome(false)
+    setTemErroSigla(false)
+
+    if (nome === '') {
+      setTemErroNome(true)
+      return false
+    }
+
+    if (sigla === '') {
+      setTemErroSigla(true)
+      return false
+    }
+
+    return true
+  }
+
+
   return (
     <>
       <div className="col-span-12">
@@ -40,12 +58,15 @@ const FormDepartamento = () => {
           />
           <label htmlFor="nome">Nome</label>
         </FloatLabel>
-        <small 
-          className="text-red-600"
-          hidden={!temErroNome}
-        >
-          Nome inválido
-        </small>
+        <div className="h-6">
+          <small 
+            className="text-red-600"
+            hidden={!temErroNome}
+          >
+            Nome inválido
+          </small>
+        </div>
+        
       </div>
 
       <div className="col-span-6">
@@ -74,24 +95,13 @@ const FormDepartamento = () => {
           className="w-full"
           onClick={() => {
 
-            if (nome === '') {
-              setTemErroNome(true)
-              return
+            if (validaFormulario()) {
+              // Vamos chamar a API
+              alert('CHAMA A API')
             }
-
-            if (sigla === '') {
-              setTemErroSigla(true)
-              return
-            }
-
-
-
           }}
         />
       </div>
-      
-
-
     </>
   )
 }
