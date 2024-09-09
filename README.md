@@ -26,6 +26,10 @@
 - [x] Camada de API com Axios
 - [x] Listagem de Departamentos via API
 
+## Aula 051 - 09.09.2024
+
+- [ ] Correção do exercício
+
 ## Links
 
 - [FlowByte - Blocos e componentes do Tailwind](https://flowbite.com/)

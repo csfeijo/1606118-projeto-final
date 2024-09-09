@@ -2,7 +2,9 @@ import { useState } from "react"
 import { Button } from "primereact/button"
 import { FloatLabel } from "primereact/floatlabel"
 import { InputText } from "primereact/inputtext"
+import { Message } from 'primereact/message'
 import { useNavigate } from "react-router-dom"
+import insereDepartamento from "../../../Services/Departamentos/insereDepartamento"
 
 const FormDepartamento = () => {
   const navigate = useNavigate()
@@ -10,6 +12,7 @@ const FormDepartamento = () => {
   const [sigla, setSigla] = useState('')
   const [temErroNome, setTemErroNome] = useState(false)
   const [temErroSigla, setTemErroSigla] = useState(false)
+  const [erroAPI, setErroAPI] = useState('')
 
   const validaFormulario = () => {
     setTemErroNome(false)
@@ -93,14 +96,31 @@ const FormDepartamento = () => {
           severity="success"
           icon="pi pi-save"
           className="w-full"
-          onClick={() => {
+          onClick={async () => {
 
             if (validaFormulario()) {
-              // Vamos chamar a API
-              alert('CHAMA A API')
+              // Caso de sucesso
+              try {
+                await insereDepartamento({
+                  nome,
+                  sigla
+                })
+
+                navigate('/departamentos')
+              } catch(e: any) {
+                if (e.response?.data?.message) {
+                  setErroAPI(e.response?.data?.message)
+                }
+              }            
+
             }
           }}
         />
+      </div>
+
+      {/* QUARTA LINHA */}
+      <div className="col-span-12" hidden={erroAPI === ''}>
+        <Message text={erroAPI} className="w-full" severity="error" />
       </div>
     </>
   )
