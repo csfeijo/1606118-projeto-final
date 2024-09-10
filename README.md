@@ -28,7 +28,11 @@
 
 ## Aula 051 - 09.09.2024
 
-- [ ] Correção do exercício
+- [x] Correção do exercício
+- [x] Validações na inserção
+- [x] Exclusão de departamentos
+- [x] Validações e loaders na exclusão
+- [x] Abertura de bug na [PrimeReact](https://github.com/primefaces/primereact/issues)
 
 ## Links
 
