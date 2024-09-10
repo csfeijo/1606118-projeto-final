@@ -41,7 +41,18 @@ const Departamentos = () => {
   const bodyAcao = (departamento: any) => {
     return (
       <>
-        <Button icon="pi pi-pencil" rounded severity='warning' className='mr-2'/>
+        <Button 
+          icon="pi pi-pencil"
+          rounded 
+          severity='warning'
+          className='mr-2'
+          onClick={() => {
+            const { id_departamento } = departamento
+
+            navigate(`/departamentos/edit/${id_departamento}`)
+          }}
+        />
+
         <Button 
           icon="pi pi-trash"
           rounded 

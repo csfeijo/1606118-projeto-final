@@ -7,8 +7,12 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<h1>Home</h1>} />
       <Route path="/departamentos" element={<Departamentos/>} />
+
+
       <Route path="/departamentos/new" element={<FormDepartamento/>} />
-      <Route path="/departamentos/edit/:id" element={<h1>Edição de Departamento</h1>} />
+      <Route path="/departamentos/edit/:id" element={<FormDepartamento/>} />
+
+
       <Route path="*" element={<h1>404 - Não Encontrado</h1>} />
     </Routes>
   )
