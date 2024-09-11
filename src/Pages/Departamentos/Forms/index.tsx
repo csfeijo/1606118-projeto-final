@@ -6,7 +6,7 @@ import { Message } from 'primereact/message'
 import SubHeader from "../../../Components/SubHeader"
 import { useNavigate, useParams } from "react-router-dom"
 import insereDepartamento from "../../../Services/Departamentos/insereDepartamento"
-import { getDepartamento } from "../../../Services/Departamentos/editaDepartamento"
+import { atualizaDepartamento, getDepartamento } from "../../../Services/Departamentos/editaDepartamento"
 
 const FormDepartamento = () => {
   const navigate = useNavigate()
@@ -29,7 +29,7 @@ const FormDepartamento = () => {
     }
     // Imediatamente já chamamos a funcao para que seja executada
     buscaDados()
-  })
+  },[])
 
   const validaFormulario = () => {
     setTemErroNome(false)
@@ -109,10 +109,21 @@ const FormDepartamento = () => {
             if (validaFormulario()) {
               // Caso de sucesso
               try {
-                await insereDepartamento({
-                  nome,
-                  sigla
-                })
+
+                if (id) {
+                  // Quando tem algo no ID é uma edição
+                  await atualizaDepartamento({
+                    id,
+                    nome,
+                    sigla
+                  })
+                } else {
+                  // Quando nao tem ID é um novo registro
+                  await insereDepartamento({
+                    nome,
+                    sigla
+                  })
+                }
 
                 navigate('/departamentos')
               } catch(e: any) {

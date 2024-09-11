@@ -26,13 +26,21 @@
 - [x] Camada de API com Axios
 - [x] Listagem de Departamentos via API
 
-## Aula 051 - 09.09.2024
+## Aula 05 - 09.09.2024
 
 - [x] Correção do exercício
 - [x] Validações na inserção
 - [x] Exclusão de departamentos
 - [x] Validações e loaders na exclusão
 - [x] Abertura de bug na [PrimeReact](https://github.com/primefaces/primereact/issues)
+
+## Aula 06 - 10.09.2024
+
+- [x] Rota de edição carregando o formulário
+- [x] Carga de informações para edição
+- [x] Git Branch e Pull Requests
+- [x] Refatoração do SubHeader
+- [x] Atualização de registro via API
 
 ## Links
 
