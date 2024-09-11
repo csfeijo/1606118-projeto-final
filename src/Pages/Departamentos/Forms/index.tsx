@@ -3,6 +3,7 @@ import { Button } from "primereact/button"
 import { FloatLabel } from "primereact/floatlabel"
 import { InputText } from "primereact/inputtext"
 import { Message } from 'primereact/message'
+import SubHeader from "../../../Components/SubHeader"
 import { useNavigate, useParams } from "react-router-dom"
 import insereDepartamento from "../../../Services/Departamentos/insereDepartamento"
 import { getDepartamento } from "../../../Services/Departamentos/editaDepartamento"
@@ -50,22 +51,13 @@ const FormDepartamento = () => {
 
   return (
     <>
-      <div className="col-span-12">
-
-        <div className="flex justify-between items-center my-6">
-          <h2 className="text-2xl font-bold">{titulo} de Departamento</h2>
-          <Button
-            icon="pi pi-chevron-left"
-            label="voltar"
-            severity="info"
-            rounded
-            onClick={() => {
-              navigate('/departamentos')
-            }}
-          />
-        </div>
-
-      </div>
+      <SubHeader 
+        title={`${titulo} de Departamento`}
+        icon="pi-chevron-left"
+        label="voltar"
+        severity="info"
+        route= "/departamentos"
+      />
       {/*  SEGUNDA LINHA */}
       <div className="col-span-6">
         <FloatLabel>
