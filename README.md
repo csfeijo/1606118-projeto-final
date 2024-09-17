@@ -42,6 +42,15 @@
 - [x] Refatoração do SubHeader
 - [x] Atualização de registro via API
 
+## Aula 07 - 16.09.2024
+
+https://fly.io/
+https://www.netlify.com/
+https://railway.app/
+https://vercel.com
+
+defeated-motion.surge.sh
+
 ## Links
 
 - [FlowByte - Blocos e componentes do Tailwind](https://flowbite.com/)
