@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 const Menu = () => {
   const navigate = useNavigate()
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
 
   return (
     <>

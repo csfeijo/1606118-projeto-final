@@ -44,14 +44,18 @@
 
 ## Aula 07 - 16.09.2024
 
-https://fly.io/
-https://www.netlify.com/
-https://railway.app/
-https://vercel.com
-
-defeated-motion.surge.sh
+- [x] Conversas sobre carreira
+- [x] Revisão de código e dúvidas
+- [x] Deploy com Surge.sh
+- [x] Construção do menu com SideBar
+- [x] Conclusão e finalização do módulo
 
 ## Links
+
+- [Fly IO](https://fly.io/)
+- [Netlify](https://www.netlify.com/)
+- [RailWay](https://railway.app/)
+- [Vercel](https://vercel.com)
 
 - [FlowByte - Blocos e componentes do Tailwind](https://flowbite.com/)
 - [Tailwind Awesome - Blocos Prontos de Tailwind](https://www.tailwindawesome.com/)
