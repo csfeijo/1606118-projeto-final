@@ -1,4 +1,4 @@
-import { BrowserRouter, Link } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { Card } from 'primereact/card'
 import Menu from './Components/Menu'
 import AppRoutes from './Routes'
